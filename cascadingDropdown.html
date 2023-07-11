@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function loadOfProduct(){
+        document.getElementById("productlst").innerHTML= "";
+       console.log(listOfProduct) 
+       for(var allValues of listOfProduct ){
+      var majorlist =  document.createElement("option");
+      majorlist.text= allValues;
+      majorlist.value = allValues;
+        document.getElementById("productlst").appendChild(majorlist)
+       }
+    }
+    var item = ["select", "Electronics", "Footwear"]
+    var Electronics = [ "TV", "Washing Machine"]
+    var Footwear = [ "sleeper", "sandle"]
+    var listOfProduct = [];
+
+    function bodyLoad(){
+       
+       for(var product of item){
+       let option = document.createElement("option");
+        option.text =product;
+        option.value = product;
+        document.getElementById("listItem").appendChild(option);
+       }
+       
+    }
+    function changecategory(){
+        var itemoflist = document.getElementById("listItem").value;
+        console.log(itemoflist)
+        switch(itemoflist){
+             case "Electronics":
+             listOfProduct = Electronics;
+             loadOfProduct()
+             break;
+             case "Footwear":
+                listOfProduct = Footwear;
+                loadOfProduct()
+                break;
+                default :
+                listOfProduct = ["please select any one catagory"]
+                loadOfProduct()
+                break
+
+        }
+
+
+    }
+</script>
+<body onload="bodyLoad()">
+    <dl>
+        <dt>Select Catagory</dt>
+        <dd><select  id="listItem" onchange="changecategory()"></select></dd>
+        <dt>Product</dt>
+        <dd><select  id="productlst"></select></dd>
+
+    </dl>
+    
+       
+        
+    
+    
+</body>
+</html>

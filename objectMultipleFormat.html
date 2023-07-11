@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = [
+            {catagory:"Electronics", product :["TV", "Washing machine"]},
+            {catagory: "Footwear", product:["sleeper", "sandle"]}
+        ]
+
+        function bodyLoad(){
+            for(var item of data ){
+
+             var li = document.createElement("li");
+            li.innerHTML = item.catagory;
+            var optgroup = document.createElement("optgroup")
+            optgroup.label = item.catagory
+            for(list of item.product){
+                console.log(list)
+                 var ul = document.createElement("ul")
+                 var ulLi = document.createElement("il");
+                 ulLi.innerHTML = list;
+                 ul.appendChild(ulLi);
+                 li.appendChild(ul);
+                var option =  document.createElement("option");
+                option.text = list;
+                option.value = list;
+                optgroup.appendChild(option)
+               
+                 
+            }
+           document.querySelector("ol").appendChild(li);
+           document.querySelector("select").appendChild(optgroup)
+          }
+        }
+
+        
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ol>
+        <select >
+
+        </select>
+        <!-- // <li>Electronics</li>
+        // <ul>
+        //     <li>TV</li>
+        //     <li>washing machine</li>
+        // </ul>
+        // <li>Footwear</li>
+        // <ul>
+        //     <li>sleeper</li>
+        //     <li>causal</li>
+        // </ul> -->
+    </ol>
+
+
+    
+</body>
+</html>

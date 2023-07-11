@@ -1,0 +1,17 @@
+<script>
+    fetch("https://fakestoreapi.com/products/1")
+    .then(function(responce){
+        return responce.json()
+    })
+    .then(function(result){
+    //    console.log(result)
+    delete result.price
+
+       for(var option in result){
+          document.write(`${option} => ${typeof result[option]} = ${result[option]}<br>` )
+       }
+       
+       document.write(` <br> <br> ${"price" in  result }`);
+        })
+     
+</script>

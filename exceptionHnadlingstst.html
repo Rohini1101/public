@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exception statement</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        try{
+            var a = parseInt(prompt("Enter the value of A"));
+            var b = parseInt(prompt("Enter the value of B"))
+            var c =a/b ;
+
+            if(b==0){
+                throw "Can't divide by 0 "
+            }
+            document.write("division : " ,c)
+        } catch(ex){
+            document.write(`inside catch ${ex}`)
+        }finally{
+            console.log("inside finally program END")
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <!-- <button class="btn btn-info">click here</button> -->
+</body>
+</html>
