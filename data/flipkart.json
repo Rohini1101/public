@@ -1,0 +1,13 @@
+{
+    "title" :"vivo T2x 5G (Aurora Gold, 128 GB) (8 GB RAM)",
+    "price" :45999,
+    "offers" :[
+        "Bank OfferFlat ₹1,250 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹15,000 to ₹39,999",
+        "Bank OfferFlat ₹3,000 Off on HDFC Bank Credit Card EMI Trxns on orders priced between ₹40,000 to ₹49,999",
+        "Bank OfferFlat ₹4,000 Off on HDFC Bank Credit Card EMI Trxns on orders of ₹50,000 and above",
+        "Special PriceGet extra ₹5000 off (price inclusive of cashback/coupon)"
+    ],
+    "ratings" : {"rate":4.3, "rating":5.3, "review":333},
+    "photo":"images/vivo.png"
+    
+}

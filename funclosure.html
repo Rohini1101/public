@@ -1,0 +1,22 @@
+<script>
+    // function outer(){
+    //     var x =10;
+    //     function inner(){
+    //         document.write(`value of X = ${x}`)
+    //     }
+    //     inner()
+    // }
+    // outer()
+
+
+function outer(){
+    var x = 10;
+    function inner(){
+        var y= 20;
+       return ` value of X - ${x} <br> value of Y - ${y}`
+    }
+    document.write(inner())
+}
+outer()
+
+</script>

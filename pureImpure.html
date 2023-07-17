@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // var template = prompt("your form", "login| signup");
+        function Template(template){
+            if(template == "login"){
+                return `
+                <h2>Login</h2>
+                <dl>
+                    <dt>User id</dt>
+                    <dd><input></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password"></dd>
+                    </dl>
+                    <button>Log In </button>
+
+                `;
+            }else if(template == "signup") {
+                return `
+                <h2>signup</h2>
+                <dl>
+                    <dt>User id</dt>
+                    <dd><input></dd>
+                    <dt>Name</dt>
+                    <dd><input></dd>
+                    <dt>Mobile No.</dt>
+                    <dd><input></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password"></dd>
+                    </dl>
+                    <button>Log In </button>
+                `
+            }else{
+                return "nothing...."
+            }
+        }
+        function templateChange(){
+            var template = document.querySelector("select").value ;
+            if(template == "login"){
+                document.querySelector("div").innerHTML= Template(template);
+ 
+            }else{
+                document.querySelector("div").innerHTML= Template(template);
+            }
+                 }
+       
+    </script>
+</head>
+<body>
+    
+   <select onchange="templateChange()">
+    <option>select</option>
+    <option value="login">login</option>
+    <option value="signup">signup</option>
+    <option value="other">Other</option>
+      
+</select>
+   <div></div> 
+    
+</body>
+</html>

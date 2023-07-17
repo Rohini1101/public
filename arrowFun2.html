@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <script>
+   fetch("https://fakestoreapi.com/products")
+//    .then(function(product){
+//     return product.json()
+//    })
+//    .then(function(list){
+//     list.map(function(item){
+//         document.write(`<p>${item.title}</p>`)
+//     })
+//    })
+    .then((product) => product.json() )
+   .then((list) =>{
+      list.map((item) => document.write(`<p>${item.title}</p>`) )
+
+   })
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

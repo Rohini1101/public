@@ -1,0 +1,16 @@
+<script>
+//     const digits = [1, 2, 3, 4, 5];
+// digits.forEach((digits) => console.log(digits));
+
+
+function applyOperation(a, b, operation) {
+  return operation(a, b);
+ }
+
+function add(a, b) {
+  return a + b;
+}
+
+const result = applyOperation(3, 4, add);
+document.write(result)
+</script>

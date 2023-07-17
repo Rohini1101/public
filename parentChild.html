@@ -1,0 +1,33 @@
+<script>
+    // function outer(outervalue){
+    //     return function inner(innervalue){
+    //         return `outer = ${outervalue} <br> inner = ${innervalue}`
+    //     };
+    // }
+    // var result = outer("I'm Outer");
+    // document.write(result("I'm  inner "));
+
+
+
+
+
+// function parent(parentParam){
+//     return function child(childParam){
+//         document.write("Child")
+//     }
+
+// }
+// var conclusion = parent("dad");
+// document.write(conclusion())
+
+
+function larger(large){
+    return function smaller(small){
+        return `larger = ${large} <br> smaller = ${small}`
+    };
+    
+}
+var school =  larger(1000);
+    document.write(school(10))
+
+</script>
