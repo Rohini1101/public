@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var topics = [{title:"HTML", Content:["HtML is markup language", "HtMl Tag"]},
+        {title:"Javascript", Content:["Javascript is scripting language","Data type" ,"iteratr"]}
+    ]
+        const bodyLoad=()=>{
+            var search = (location.search.substring(location.search.indexOf("=")+1))
+            topics.map((topics)=>{
+            if(search.toLocaleUpperCase()=== topics.title.toLocaleUpperCase()){
+                topics.Content.map((item)=>{
+                  var li = document.createElement("li")
+                  li.innerHTML =item;
+                  document.querySelector("ol").appendChild(li)
+                })
+            }
+            })
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <h1>Result</h1>
+    <ol>
+        </ol>
+</body>
+</html>

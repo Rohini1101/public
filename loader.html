@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var count = 0
+        function showStatus() {
+            count++;
+            document.getElementById("progress").value =  count;
+            if(count === 100){
+                location.href = "shopper.html"
+            }else{
+                document.getElementById("status").innerHTML = `${count} %`;
+            }
+            
+
+        }
+        function loadButton() {
+            document.getElementById("loadBtn").style.display = "none";
+            document.getElementById("loadID").style.display = "block"
+            setInterval(showStatus,200)
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center " style="height: 400px;">
+        <div>
+            <button class="btn btn-primary" onclick="loadButton()" id="loadBtn">Load Template</button>
+            <div class="text-center mt-2" id="loadID" style="display: none;">
+                <span class="spinner-border text-info"></span><br>
+                <progress  id="progress" min="1" max="100" value="1"></progress>
+                <p id="status"></p>
+                <div>Loading...</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

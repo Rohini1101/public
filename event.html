@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function clickHere(events,thisItem){
+            console.log(events)
+            
+            document.write(`
+            X co-ordinator : ${events.clientX} <br>
+            Y co-ordinator :  ${events.clientY}
+            control-Click : ${events.ctrlKey}
+            button ID : ${thisItem.id} <br>
+            button Name : ${thisItem.name}  <br>
+            button ClassName :  ${thisItem.className} <br>
+            `)
+        }
+    </script>
+</head>
+<body>
+    <button   id="buttonId" class="btn btn-info" name="buttonName"  onclick="clickHere(event,this)">Insert</button>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script>
+    class Superclass {
+        Print(){
+            document.write("Hello I'm from Super class ")
+        }
+    }
+    class DerivedClass extends Superclass{
+        Print1(){
+            super.Print();
+            document.write(" Derived class ")
+        }
+    }
+    let obj = new DerivedClass();
+    obj.Print1();
+
+</script>

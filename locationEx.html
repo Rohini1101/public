@@ -1,0 +1,24 @@
+<script>
+switch(location.protocol){
+    case"http:":
+    document.write(`
+     Host :  ${location.host} <br>
+    Protocol  :  ${location.protocol}     --  You are Using Live Server<br>
+    Pathname  : ${location.pathname}<br>
+    URL : ${location.href}<br>
+    Port_Number :    ${location.port}<br>
+    `)
+    break;
+    default:
+        document.write(
+            `Host :  ${location.host} <br>
+    Protocol  :  ${location.protocol}     --  You are Using fie path<br>
+    Pathname  : ${location.pathname}<br>
+    URL : ${location.href}<br>
+    Port_Number :    ${location.port}<br>`
+        )
+}
+
+
+
+</script>

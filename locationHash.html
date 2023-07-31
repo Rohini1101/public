@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        const fetchHandler=()=>{
+            // document.write(`count total pages in current history  ${history.length}`)
+            console.log(location.hash, "RRR")
+            var topic ="";
+            switch(location.hash){
+                case "#html":
+                    topic= "Html tutorial <br>"
+                    break;
+                    case "#CSS":
+                    topic= "CSS tutorial <br>"
+                    break;
+                    case "#Javascript":
+                    topic= "Javascript tutorial <br>"
+                    break;
+                    case "#ReactJs":
+                    topic= "ReactJs tutorial <br>"
+                    break;
+             }
+             document.getElementById("result").innerHTML += topic;
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+        }
+        .topic{
+            box-shadow: 2px 2px 2px lightslategray;
+            margin: 10px;
+            padding: 10px;
+        }
+        .topic:target{
+            background-color: yellowgreen;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <div class="d-flex justify-content-between  bg-warning text-whitesmoke p-2">
+        <a href="#html">HTML</a>
+        <a href="#CSS">CSS</a>
+        <a href="#Javascript">Javascript</a>
+        <a href="#ReactJs">ReactJs</a>
+    </div>
+    <div class="container">
+        <div class="topic"  id="html">
+            <h2>HTML</h2>
+            <p>Hyper text marke-up language</p>
+        </div>
+        <div   class="topic" id="CSS">
+            <h2>CSS</h2>
+            <p>Hyper text marke-up language</p>
+        </div>
+        <div  class="topic" id="Javascript" >
+            <h2>Javascript</h2>
+            <p>Hyper text marke-up language</p>
+        </div>
+        <div  class="topic" id="ReactJs" >
+            <h2>ReactJs</h2>
+            <p>Hyper text marke-up language</p>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-center"> 
+        <button onclick="fetchHandler()" class="btn btn-info  w-25 m-3">
+           Fetch
+            </button>
+            <button onclick="location.reload()" class="btn btn-info justify-content-center w-25 m-3">Reload</button>
+            </div>
+            <div class="d-flex justify-content-center"> 
+        <button onclick="history.back()" class="btn btn-info  w-25 m-3">
+           Go Back
+            </button>
+            <button onclick="history.forward()" class="btn btn-info justify-content-center w-25 m-3">Go Forward</button>
+            </div>
+            <p id="result"></p>
+   
+    
+</body>
+</html>

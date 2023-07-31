@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function clickHere(...obj){
+            console.log(obj)
+            const [id, name, className] = obj;
+            document.write(`
+            button ID : ${id} <br>
+            button Name : ${name}  <br>
+            button ClassName :  ${className} <br>
+            `)
+        }
+    </script>
+</head>
+<body>
+    <button   id="buttonId" class="btn btn-primary" name="buttonName"  onclick="clickHere(this.id, this.name, this.className)">Insert</button>
+    
+</body>
+</html>

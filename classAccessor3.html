@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        // D:\rohini workplace\Tution classes example\library\modules\classAccessor3.js
+     import {Product} from "../library/modules/classAccessor3.js";
+     var obj = new Product();
+     obj.Name = "Pushpaaa";
+     obj.Price = 10000;
+     obj.priceSet = prompt("Enter a new value of Price  :  ");
+     document.querySelector("p").innerHTML =`
+       Name = ${obj.Name}<br>
+       Price = ${obj.Price}<br>
+       Stock = ${obj.Stock}<br>
+       Rating = ${obj.customerRating}<br>
+     `
+
+
+
+    </script>
+</head>
+<body>
+    <p></p>
+    
+</body>
+</html>

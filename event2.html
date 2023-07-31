@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function clickHere(...details){
+         console.log(details)
+         const [id, sheIsOK, name, info] = details
+         document.write(`
+          Candidate Id : ${details[0]} <br>
+          Candidate sheIsOK : ${details[1]} <br>
+          Candidate name : ${details[2]} <br>
+          Candidate info :   Age : ${details[3].age}  , Surname : ${details[3].surmane}<br>
+         `)
+
+        }
+
+    </script>
+</head>
+<body>
+    <button  id="rohini" name="mohadikar" class="btn btn-warning" onclick="clickHere(1,true,`rohini`, {age:24,surmane:`Mohadikar`})">Insert</button>
+</body>
+</html>

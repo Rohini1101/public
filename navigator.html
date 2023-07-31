@@ -1,0 +1,26 @@
+<script>
+    console.log(navigator.mimeTypes,"rrr")
+for(var item2 of navigator.mimeTypes){
+    document.write(`${item2.type} <br> <br> <br>`)
+}
+
+    for(var items of navigator.plugins){
+        document.write(`${items.name }<br> `)
+    }
+    if(navigator.plugins["PDF Viewer"]===undefined){
+        document.write("PDF Viewer are not Installed Rohini<br>")
+    }else{
+        document.write("PDF Viewer are installed   Rohini<br>")
+    }
+    document.write(`
+    Browser Family : ${navigator.appName} <br>
+    Browser Version :  ${navigator.appVersion} <br>
+    Browser Language  :  ${navigator.language} <br>
+    Browesr Languages  :  ${navigator.languages} <br>
+    Browser Platform : ${navigator.platform} <br>
+    Browser plugins :  ${navigator.plugins}<br>
+    Browser Cookie : ${navigator.cookieEnabled?"All cokie are ENABLED":"Cookie are blocked"}
+
+   
+    `)
+</script>

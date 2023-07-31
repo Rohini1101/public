@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const showHere=()=> {
+            document.querySelector("p").innerHTML =`<b>Special Offer</b> <i>50% off</i> on bag`
+            document.querySelector("img").style.width = "200px";
+            document.querySelector("img").style.height = "150px"
+        };
+        const hideDetails = () =>{
+            document.querySelector("p").innerHTML =``
+            document.querySelector("img").style.width = "100px";
+            document.querySelector("img").style.height = "100px"
+
+        };
+    </script>
+</head>
+<body> 
+    <img onmouseover="showHere()" onmouseout="hideDetails()" src="images/vivo.png" alt="images" width="100" height="100">
+    <p></p>
+    
+</body>
+</html>

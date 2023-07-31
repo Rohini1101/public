@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class DataBase{
+            constructor(dbName){
+                document.write(`Connected  with ${dbName} and  `)
+            }
+            insert(){
+                document.write("inserted sucessfully   !<br>")
+            }
+
+            delete(){
+                document.write("deleted sucessfully   ! <br>")
+            }
+        }
+        
+
+        const insertClick= ()=>{
+            var obj = new DataBase(document.getElementById("listofDatabase").value)
+            obj.insert()
+        }
+        const deleteclick=()=>{
+            var obj = new DataBase("employee")
+            obj.delete()
+
+        }
+    </script>
+</head>
+<body>
+    <select id="listofDatabase" >
+        <option>List of Database</option>
+        <option>SQL</option>
+        <option>MySQl</option>
+        <option>MongoDB</option>
+        
+        
+        </select>
+    <button onclick="insertClick()" >Insert</button>
+    <button onclick="deleteclick()">Delete</button>
+    
+</body>
+</html>

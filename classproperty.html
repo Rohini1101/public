@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class product{
+            ProductId =1;
+            Name = "Sony Tv";
+            stock ="true";
+            City = ["Nagpur", "Nashik"];
+            Rating = {rate:4.5, count:5}
+        }
+        var tv = new product();
+        tv.Name = prompt("Enter Tv Name")
+        document.write(`
+               ID : ${tv.ProductId} <br>
+               Name:     ${tv.Name}<br>
+               stock:     ${tv.stock }<br>
+               City:   ${tv.City}<br>
+               Rating:    rate=  ${tv.Rating.rate}    count = ${tv.Rating.count}
+                      `
+                      )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        // D:\rohini workplace\Tution classes example\library\modules\classMethod.js
+        import {Collection} from "../library/modules/classMethod.js";
+        var obj = new Collection()
+        obj.Name = prompt("Enter Name");
+        obj.Price = parseInt(prompt("Enter Price"));
+        obj.Qty = parseInt(prompt("Enter Qty"));
+        document.querySelector("p").innerHTML = obj.Print();
+
+    </script>
+</head>
+<body>
+    <p></p>
+    
+</body>
+</html>

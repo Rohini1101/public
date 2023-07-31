@@ -1,0 +1,22 @@
+<script>
+    class kotak_bank_V1{
+        Deposite = "Money deposite";
+        Withdraw = "Money Withdraw";
+        Print(){
+            document.write(`${this.Deposite}<br>  ${this.Withdraw} <br>`)
+        }
+    }
+
+       class kotak_bank_V2{
+      Loan = "Insurence & personal Loan";
+      NRI = "Remitence Exchange of Money";
+      Print(){
+        let obj = new  kotak_bank_V1();
+        obj.Print()
+        document.write(`${this.Loan} <br>  ${this.NRI}`)
+      }
+      }
+      var obj2 = new  kotak_bank_V2();
+      obj2.Print();
+
+</script>

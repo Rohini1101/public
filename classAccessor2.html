@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class UserDetails {
+            userName = "Rohini";
+            get userNameGet(){
+                return this.userName;
+            }
+            set newUserName(newName){
+                this.userName = newName;
+            }
+            
+            
+        }
+        var obj = new UserDetails();
+        obj.newUserName = "Rohini";
+        document.write(obj.userNameGet)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
